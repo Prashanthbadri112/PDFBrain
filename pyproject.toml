@@ -1,9 +1,36 @@
 [project]
-name = "rag-assitant"
+name = "rag-assistant"
 version = "0.1.0"
-description = "Add your description here"
+description = "RAG Document Assistant"
 readme = "README.md"
 requires-python = ">=3.10"
+
 dependencies = [
-    "requests>=2.32.5",
+    # Web Framework
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+
+    # LangChain ecosystem
+    "langchain",
+    "langchain-community",
+    "langchain-core",
+    "langchain-groq",
+
+    # Vector store
+    "pinecone",
+
+    # Embeddings
+    "langchain-google-genai",
+
+    # PDF parsing
+    "pypdf",
+
+    # Utils
+    "python-dotenv",
+    "pydantic",
+    "requests",
+    "tqdm",
+    "loguru",
+    "gradio"
 ]
